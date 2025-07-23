@@ -1,6 +1,5 @@
 package com.jinn.board_with_bcrypt.controller;
 
-
 import com.jinn.board_with_bcrypt.dto.UserRequestDto;
 import com.jinn.board_with_bcrypt.dto.UserResponseDto;
 import com.jinn.board_with_bcrypt.model.User;

@@ -41,9 +41,13 @@ public class PostController {
         return postService.create(dto);
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id, @Valid PostDeleteRequestDto dto) {
-        postService.delete(id, dto);
+    @PutMapping("/{id}")
+    public PostResponseDto update(@PathVariable Long id, @Valid @RequestBody PostRequestDto dto) {
+        return postService.update(id, dto);
+    }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id, @Valid @RequestBody PostDeleteRequestDto dto) {
+        postService.delete(id, dto);
     }
 }
